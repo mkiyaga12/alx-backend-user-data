@@ -30,15 +30,15 @@ def stats() -> str:
 def unauthorized() -> str:
     """ GET /api/v1/unauthorized
     Return:
-      - the error handler for 401 will be executed
+      - error handler for 401
     """
     abort(401)
 
 
 @app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
 def forbidden() -> str:
-    """ GET /api/v1/unauthorized
+    """ GET /api/v1/forbidden
     Return:
-      - the error handler for 401 will be executed
+      - error handler for 403
     """
     abort(403)
